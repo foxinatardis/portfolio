@@ -1,0 +1,197 @@
+body {
+	margin: 0;
+	background-color: #eee;
+}
+div.intro {
+	width: 100%;
+
+	height: 50vh;
+	max-height: 600px;
+	/*margin: auto;*/
+
+	-webkit-perspective: 150px;
+	-webkit-perspective-origin: 50% 50%;
+	perspective: 150px;
+	perspective-origin: 50% 50%;
+
+	opacity: 0;
+}
+.skip {
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+h2.intro {
+	display: block;
+	width: 400px;
+	font-family: sans-serif;
+	font-weight: normal;
+	text-shadow: 0 0 2px rgba(200, 200, 200, 0);
+	color: rgba(255, 255, 255, 0);
+	font-size: 2em;
+	top: 80%;
+	margin: 0;
+	position: absolute;
+}
+.intro1 {
+	background-image: url("./intro_pics/rock-climbing.jpg");
+	background-repeat: no-repeat;
+	background-size: 140%;
+	background-position: 50% 30%;
+	height: 100%;
+	width: 100%;
+	z-index: 3;
+	position: absolute;
+	overflow: hidden;
+	-webkit-perspective: 150px;
+	-webkit-perspective-origin: 50% 50%;
+	perspective: 150px;
+	perspective-origin: 50% 50%;
+	border-radius: 5px;
+	opacity: 1;
+}
+.intro2 {
+	background-image: url("./intro_pics/mountain-biking.jpg");
+	background-repeat: no-repeat;
+	background-size: 140%;
+	background-position: 32% 84%;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	position: absolute;
+	opacity: 1;
+}
+.intro3 {
+	z-index: 1;
+	height: inherit;
+	margin: auto;
+
+	opacity: 0;
+}
+.intro4 {
+	background-image: url("./intro_pics/web-development.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	z-index: 0;
+	position: absolute;
+	opacity: 0;
+	-webkit-perspective: 150px;
+	-webkit-perspective-origin: 50% 50%;
+	perspective: 150px;
+	perspective-origin: 50% 50%;
+	overflow: hidden;
+}
+.intro4>h2 {
+	color: rgba(244, 244, 244, 0);
+	font-size: 2em;
+	font-family: sans-serif;
+	text-align: center;
+	display: block;
+	width: 400px;
+	font-family: sans-serif;
+	font-weight: normal;
+	margin: auto;
+}
+h2.first {
+	color: white;
+	text-shadow: 0 0 5px rgb(20, 20, 20);
+	position: absolute;
+	top: 43%;
+	left: 5%;
+	z-index: 5;
+}
+h2.last {
+	color: white;
+	text-shadow: 0 0 5px rgb(20, 20, 20);
+	position: absolute;
+	top: 57%;
+	left: 80%;
+	z-index: 5;
+}
+.square.one {
+	background-image: url("./intro_pics/brand-square.png");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: inherit;
+	opacity: 0;
+	z-index: 4;
+	position: absolute;
+}
+.square.two {
+	background-image: url("./intro_pics/brand-square1.png");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: inherit;
+	opacity: 0;
+	z-index: 3;
+	position: absolute;
+}
+.square.three {
+	background-image: url("./intro_pics/brand-square2.png");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: inherit;
+	opacity: 0;
+	z-index: 2;
+	position: absolute;
+}
+.square.four {
+	background-image: url("./intro_pics/brand-transparent.png");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: inherit;
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+}
+.content {
+	display: none;
+	opacity: 0;
+	z-index: 0;
+	width: 100%;
+	background-color: rgb(0, 25, 15);
+	height: 800px;
+	position: absolute;
+	top: 0;
+}
+nav {
+	height: 80px;
+	width: auto;
+	margin: 5px;
+	border: 2px solid rgb(25, 200, 155);
+	box-shadow: 0 0 5px rgb(25, 200, 155);
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+nav>img {
+	height: 50px;
+	border-radius: 25px;
+	margin-top: 15px;
+	margin-left: 10px;
+		box-shadow: 0 0 5px rgb(25, 200, 155);
+}
+.navbox {
+	float: right;
+	height: 50px;
+	margin: 10px 5px 10px 0px;
+	border: 2px solid rgb(25, 200, 155);
+	box-shadow: 0 0 5px rgb(25, 200, 155);
+	box-sizing: border-box;
+	width: 100px;
+	text-align: center;
+	font-family: sans-serif;
+	color: rgb(25, 200, 155);
+	border-radius: 5px;
+	line-height: 70px;
+}
+
+@media only screen and (max-width: 500px) {
+	div.intro {
+
+		height: 35vh;
+		max-height: 600px;
+
+	}
+}
