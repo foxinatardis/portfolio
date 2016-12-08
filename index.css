@@ -19,6 +19,8 @@ div.intro {
 .skip {
 	font-family: sans-serif;
 	font-weight: lighter;
+	position: absolute;
+	top: 0;
 }
 h2.intro {
 	display: block;
@@ -151,8 +153,8 @@ h2.last {
 	opacity: 0;
 	z-index: 0;
 	width: 100%;
-	background-color: rgb(0, 25, 15);
-	height: 800px;
+	background-color: rgb(0, 15, 15);
+	/*height: 800px;*/
 	position: absolute;
 	top: 0;
 }
@@ -160,17 +162,22 @@ nav {
 	height: 80px;
 	width: auto;
 	margin: 5px;
+	background-color: rgb(0, 15, 15);
 	border: 2px solid rgb(25, 200, 155);
 	box-shadow: 0 0 5px rgb(25, 200, 155);
 	box-sizing: border-box;
 	border-radius: 5px;
+	position: fixed;
+	opacity: 1;
+	z-index: 1;
 }
 nav>img {
 	height: 50px;
 	border-radius: 25px;
 	margin-top: 15px;
 	margin-left: 10px;
-		box-shadow: 0 0 5px rgb(25, 200, 155);
+	box-shadow: 0 0 5px rgb(25, 200, 155);
+	opacity: 1;
 }
 .navbox {
 	float: right;
@@ -179,19 +186,92 @@ nav>img {
 	border: 2px solid rgb(25, 200, 155);
 	box-shadow: 0 0 5px rgb(25, 200, 155);
 	box-sizing: border-box;
-	width: 100px;
+	background-color: rgb(0, 15, 15);
+	width: 24%;
 	text-align: center;
 	font-family: sans-serif;
 	color: rgb(25, 200, 155);
 	border-radius: 5px;
 	line-height: 70px;
+	opacity: 1;
 }
+.section {
+	/*height: 800px;*/
+	width: 100%;
+	position: relative;
+	-webkit-perspective: 500px;
+	-webkit-perspective-origin: 50% 50%;
+	perspective: 500px;
+	perspective-origin: 50% 50%;
+	transform-style: preserve-3d;
+}
+.projectDetail {
+	display: block;
+	float: right;
+}
+#about {
+	margin-top: 150px;
+}
+.cardWrap {
+	/*position: absolute;*/
+	/*left: 0;*/
+	/*width: 100px;*/
+}
+.card {
 
+	height: 70vh;
+	border: 2px solid rgb(25, 200, 155);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(25, 200, 155);
+	font-family: sans-serif;
+	color: rgb(25, 200, 155);
+	width: 100%;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10vh;
+	padding: 20px;
+	overflow: scroll;
+	/*transform: rotateY(-90deg) translateZ(-100px);*/
+	/*transform: ;*/
+}
+.sectionHead {
+	color: rgb(25, 200, 155);
+	text-shadow: 0 0 5px rgb(25, 200, 155);
+	font-family: sans-serif;
+	font-weight: normal;
+	margin-left: 5%;
+}
+a {
+	color: #eee;
+	text-shadow: 0 0 5px rgb(200, 200, 200);
+}
+.bold {
+	color: rgb(50, 250, 205);
+	text-shadow: 0 0 5px rgb(200, 200, 200);
+}
 @media only screen and (max-width: 500px) {
 	div.intro {
 
 		height: 35vh;
 		max-height: 600px;
 
+	}
+	.card {
+		height: 70vh;
+		border: 2px solid rgb(25, 200, 155);
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgb(25, 200, 155);
+		font-family: sans-serif;
+		color: rgb(25, 200, 155);
+		/*width: 90%;*/
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10vh;
+		padding: 20px;
+		overflow: scroll;
+	}
+	#about {
+		margin-top: 150px;
 	}
 }
