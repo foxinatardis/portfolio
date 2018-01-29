@@ -1,3 +1,5 @@
 *.jpg
 *.svg
 *.png
+node_modules
+npm-debug.log

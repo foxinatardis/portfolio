@@ -1,0 +1,89 @@
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+.not-hidden {
+  visibility: inherit;
+  display: block;
+}
+
+.jumbotron {
+  background: url('/intro_pics/web-development.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40vh;
+}
+
+.bottom {
+	height: 100px;
+}
+
+strong {
+  font-size: 1.05em;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+  color: #000;
+	background-color: #eee;
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+}
+
+.festv-us > .container > p {
+    margin: 24px 0 24px 0;
+}
+
+.festv-us li {
+    margin-top: 5px;
+}
+
+.technologies {
+    margin-left: -2em;
+}
+.technologies > li {
+    display: block;
+    float: left;
+    background-color: #333;
+    color: #eee;
+    padding: 5px;
+    margin: 5px;
+}
+.themdg > .container > p {
+    display: block;
+    margin: 24px 0 24px 0;
+    clear: left;
+}
+
+.themdg iframe {
+    width: 80vw;
+    height: 45vw;
+}
+
+.technologies::after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
+}

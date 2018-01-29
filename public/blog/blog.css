@@ -1,0 +1,55 @@
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+.not-hidden {
+  visibility: inherit;
+  display: block;
+}
+
+.bottom {
+    height: 100px;
+}
+
+.jumbotron {
+  background: url('/images/video-card.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 40vh;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #000;
+    background-color: #eee;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+p {
+    padding: 20px;
+}
+pre {
+    margin: 0px 20px;
+}

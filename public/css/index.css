@@ -1,0 +1,115 @@
+.navbar {
+	margin-bottom: 0;
+}
+
+.picture {
+	background: url('/intro_pics/mountain-biking.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 40vh;
+	background-position: center;
+}
+
+img.circle {
+	border-radius: 100%;
+	margin: auto;
+	width: 100%;
+}
+
+.caption {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.picture-holder {
+	margin-top: 20px;
+	padding: 0 7%;
+}
+
+.indent {
+	padding: 5px 10px;
+}
+
+.bottom {
+	height: 100px;
+}
+
+.icon-link {
+	font-size: 3em;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.icon-link:hover {
+	color: #39f;
+}
+
+.header {
+	text-align: center;
+	color: #333;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 3.5em;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	color: #000;
+	background-color: #eee;
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+}
+
+.not-ready {
+  visibility: hidden;
+  display: none;
+}
+
+.picture {
+	z-index: 1;
+	position: fixed;
+	top: 50px;
+	width: 100%;
+}
+
+.content {
+	z-index: 2;
+	width: 100%;
+	background-color: #eee;
+	position: absolute;
+	top: 65vh;
+	padding: 40px 80px;
+}
+
+@media only screen and (max-width: 992px) {
+	.content {
+		padding: 30px 50px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.picture-holder {
+		padding: 0 15%;
+	}
+
+	.content {
+		padding: 20px 20px;
+	}
+}
