@@ -22,6 +22,7 @@ export default {
   clear: both;
   width: 0px;
   margin: 0 auto;
+  perspective: 200px;
 }
 .wrapper {
   margin-left: -200px;
@@ -34,23 +35,43 @@ export default {
   width: 400px;
 }
 .far-left {
-  transform: perspective(200px) translateZ(-175px) translateX(-47vw);
+  -o-transform: translate3d(-47vw, 0px, -175px);
+  -moz-transform: translate3d(-47vw, 0px, -175px);
+  -webkit-transform: translate3d(-47vw, 0px, -175px);
+  -ms-transform: translate3d(-47vw, 0px, -175px);
+  transform: translate3d(-47vw, 0px, -175px);
   z-index: 3;
 }
 .left {
-  transform: perspective(200px) translateZ(-75px) translateX(-22vw);
+  -o-transform: translate3d(-22vw, 0px, -75px);
+  -moz-transform: translate3d(-22vw, 0px, -75px);
+  -webkit-transform: translate3d(-22vw, 0px, -75px);
+  -ms-transform: translate3d(-22vw, 0px, -75px);
+  transform: translate3d(-22vw, 0px, -75px);
   z-index: 5;
 }
 .center {
-  transform: perspective(200px) translateZ(0px) translateX(0vw);
+  -o-transform: translate3d(0vw, 0px, 0px);
+  -moz-transform: translate3d(0vw, 0px, 0px);
+  -webkit-transform: translate3d(0vw, 0px, 0px);
+  -ms-transform: translate3d(0vw, 0px, 0px);
+  transform: translate3d(0vw, 0px, 0px);
   z-index: 7;
 }
 .right {
-  transform: perspective(200px) translateZ(-75px) translateX(22vw);
+  -o-transform: translate3d(22vw, 0px, -75px);
+  -moz-transform: translate3d(22vw, 0px, -75px);
+  -webkit-transform: translate3d(22vw, 0px, -75px);
+  -ms-transform: translate3d(22vw, 0px, -75px);
+  transform: translate3d(22vw, 0px, -75px);
   z-index: 5;
 }
 .far-right {
-  transform: perspective(200px) translateZ(-175px) translateX(47vw);
+  -o-transform: translate3d(47vw, 0px, -175px);
+  -moz-transform: translate3d(47vw, 0px, -175px);
+  -webkit-transform: translate3d(47vw, 0px, -175px);
+  -ms-transform: translate3d(47vw, 0px, -175px);
+  transform: translate3d(47vw, 0px, -175px);
   z-index: 3;
 }
 </style>
