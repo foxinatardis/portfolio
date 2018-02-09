@@ -199,6 +199,9 @@ function moveCarousel(direction) {
           <h4>A Few Things to Remember</h4>
           <div class="col-xs-12">
             <p>
+              Always be wary of cross-browser support and how different browsers will render things. Certain readers may not have made it this far into the post, I haven't had time to go through Safari testing and modern Firefox browsers will do strange things if you attempt to engage your transforms too quickly.
+            </p>
+            <p>
                You almost never want to use 'translateZ' with a positive value as it can cause some ugly distortions especially with text. Instead change the 'perspective' value and move items away from you as appropriate.
             </p>
             <p>
