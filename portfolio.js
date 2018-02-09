@@ -23,9 +23,9 @@ app.get('/blog/blog.html', (req, res) => {
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/vue/dist/index.html');
 });
-app.use(express.static(__dirname + '/vue/dist'));
 app.use(history());
 
+app.use(express.static(__dirname + '/vue/dist'));
 
 
 app.listen(PORT);
