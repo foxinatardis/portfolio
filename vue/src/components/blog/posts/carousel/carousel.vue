@@ -33,7 +33,7 @@
   position: relative;
   height: 300px;
   clear: both;
-  transform: perspective(200px)
+  perspective: 200px;
 }
 .boxes {
   position: absolute;
@@ -69,7 +69,7 @@
       </section>
       <section>
         <h4>What do we notice so far?</h4>
-        <p class="col-xs-12">Okay, so we are a bit off center... but you'll notice that the grey boxes that remain visible on the screen are already positioned nicely relative to eachother, and their position reacts to the size of your viewport. If you resize your browser window you'll notice how they change position to accomodate the redefined space with pure CSS.</p>
+        <p class="col-xs-12">Okay, so we are a bit off center... but you'll notice that the grey boxes are already positioned nicely relative to eachother on the Z-axis, and their position on the X-axis reacts to the size of your viewport. If you resize your browser window you'll notice how they change position to accomodate the redefined space with pure CSS.</p>
         <p class="col-xs-12">Next we will deal with our centering problem, but first a quick explaination for those who may not see what the cause is. Our CSS is designed to translate the X coordinates of our elements based upon the center of the screen, but that is not how elements are drawn on the page, rather they are drawn by the browser starting at the top left corner of the element. Thus what we have done is drawn a box (the 'container') starting at the edge of the last relatively positioned div (or the screen), then drawn five more boxes (with the class 'boxes') also starting at that same left edge, then moved them to the left and right of that starting position using our position based classes.</p>
       </section>
       <section>

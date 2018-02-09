@@ -41,8 +41,7 @@ export default {
         { name: 'item 5', color: 'yellow' },
         { name: 'item 6', color: 'orange' }
       ],
-      displayIndicies: [],
-      disabled: false
+      displayIndicies: []
     }
   },
   created () {
@@ -52,20 +51,11 @@ export default {
   },
   methods: {
     moveCarousel (direction) {
-      const vm = this
-      if (vm.disabled) {
-        return
-      }
-      vm.disabled = true
       if (direction === 'left') {
         this.displayIndicies.unshift(this.displayIndicies.pop())
       } else if (direction === 'right') {
         this.displayIndicies.push(this.displayIndicies.shift())
       }
-      setTimeout(vm.enableCarousel, 500)
-    },
-    enableCarousel () {
-      this.disabled = false
     }
   }
 }

@@ -18,6 +18,7 @@ export default {
   position: relative;
   height: 300px;
   clear: both;
+  perspective: 200px;
 }
 .element {
   position: absolute;
@@ -27,33 +28,33 @@ export default {
   width: 400px;
 }
 .far-left {
-  -ms-transform: perspective(200px) translateZ(-175px) translateX(-47vw);
-  -webkit-transform: perspective(200px) translateZ(-175px) translateX(-47vw);
-  transform: perspective(200px) translateZ(-175px) translateX(-47vw);
+  -ms-transform: translate3d(-47vw, 0, -175px);
+  -webkit-transform: translate3d(-47vw, 0, -175px);
+  transform: translate3d(-47vw, 0, -175px);
   z-index: 3;
 }
 .left {
-  -ms-transform: perspective(200px) translateZ(-75px) translateX(-22vw);
-  -webkit-transform: perspective(200px) translateZ(-75px) translateX(-22vw);
-  transform: perspective(200px) translateZ(-75px) translateX(-22vw);
+  -ms-transform: translate3d(-22vw, 0, -75px);
+  -webkit-transform: translate3d(-22vw, 0, -75px);
+  transform: translate3d(-22vw, 0, -75px);
   z-index: 5;
 }
 .center {
-  -ms-transform: perspective(200px) translateZ(0px) translateX(0vw);
-  -webkit-transform: perspective(200px) translateZ(0px) translateX(0vw);
-  transform: perspective(200px) translateZ(0px) translateX(0vw);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   z-index: 7;
 }
 .right {
-  -ms-transform: perspective(200px) translateZ(-75px) translateX(22vw);
-  -webkit-transform: perspective(200px) translateZ(-75px) translateX(22vw);
-  transform: perspective(200px) translateZ(-75px) translateX(22vw);
+  -ms-transform: translate3d(22vw, 0, -75px);
+  -webkit-transform: translate3d(22vw, 0, -75px);
+  transform: translate3d(22vw, 0, -75px);
   z-index: 5;
 }
 .far-right {
-  -ms-transform: perspective(200px) translateZ(-175px) translateX(47vw);
-  -webkit-transform: perspective(200px) translateZ(-175px) translateX(47vw);
-  transform: perspective(200px) translateZ(-175px) translateX(47vw);
+  -ms-transform: translate3d(47vw, 0, -175px);
+  -webkit-transform: translate3d(47vw, 0, -175px);
+  transform: translate3d(47vw, 0, -175px);
   z-index: 3;
 }
 </style>
