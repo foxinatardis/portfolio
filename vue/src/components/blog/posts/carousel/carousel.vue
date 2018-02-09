@@ -9,11 +9,11 @@
       <section>
         <h4>The Backstory <span class="sub-title">(feel free to skip this and scroll to the good parts)</span></h4>
         <p>A while back I was asked to fix a client's carousel display on their homepage. The existing version was a bit janky, it sort of jumped around from side to side, the caption text didn't scale properly, overall it didn't present a smooth and professional experience. The client pointed me to <a href="https://www.livenation.com/">livenation.com's</a> homepage and said he wanted something like that.</p>
-        <p>Given that incorporating animation functionality from a library such as jQuery or better yet Velocity was not an option for the project, I created a solution using basic transforms and dynamic class assignmentsThe application was built in AngularJS with SASS for styling, while this post will reference plain CSS and Vue, the concepts are easy enough to extrapolate (in fact easier in some cases) for other frameworks and CSS preprocessors if desired.</p>
+        <p>Given that incorporating animation functionality from a library such as jQuery or better yet Velocity was not an option for the project, I created a solution using basic transforms and dynamic class assignments. The application was built in AngularJS with SASS for styling, but this post will reference plain CSS and use Vue as the framework (since that's what built this site in). That being said, the concepts are easy enough to extrapolate (in fact easier in some cases) for other frameworks and CSS preprocessors if desired.</p>
       </section>
       <section>
         <h4>The Good Parts</h4>
-        <p class="col-xs-12 col-sm-6">Okay, with the backstory behind us let's dive in. At its most basic, what we are going to create here is a container which displays 5 elements at a time with one in the center and two to either side moving progressively backwards. You'll notice I have added some classes with position names to start off, we'll be assigning them dynamically later to allow for movement but let's just get the basic positioning down for now.</p>
+        <p class="col-xs-12 col-sm-6">Okay, with the backstory behind us let's dive in. At its most basic, what we are going to create here is a container which displays five elements at a time with one in the center and two to either side moving progressively into the background. You'll notice I have added some classes with position names to start off, we'll be assigning them dynamically later to allow for movement but let's just get the basic positioning down for now.</p>
         <code class="col-xs-12 col-sm-6">
           <pre>
 &lt;div class="container"&gt;
@@ -30,15 +30,15 @@
           <pre>
 .container {
   position: relative;
-  height: 200px;
+  height: 300px;
   clear: both;
 }
 .boxes {
   position: absolute;
   background-color: grey;
   border: 1px solid black;
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 400px;
 }
 .far-left {
   transform: perspective(200px) translateZ(-175px) translateX(-47vw);
@@ -68,7 +68,7 @@
       <section>
         <h4>What do we notice so far?</h4>
         <p class="col-xs-12">Okay, so we are a bit off center... but you'll notice that the grey boxes that remain visible on the screen are already positioned nicely relative to eachother, and their position reacts to the size of your viewport. If you resize your browser window you'll notice how they change position to accomodate the redefined space with pure CSS.</p>
-        <p class="col-xs-12">Next we will deal with our centering problem, but first a quick explaination for those who may not see what the cause is. Our CSS has is designed to translate the X coordinates of our elements based upon the center of the screen, but that is not how elements are drawn on the page, rather they are drawn by the browser starting at the top left corner of the element. Thus what we have done is drawn a box (the 'container') starting at the edge of the last relatively positioned div (or the screen), then drawn five more boxes (with the class 'boxes') also starting at that same left edge, then moved them to the left and right of that starting position using our position based classes.</p>
+        <p class="col-xs-12">Next we will deal with our centering problem, but first a quick explaination for those who may not see what the cause is. Our CSS is designed to translate the X coordinates of our elements based upon the center of the screen, but that is not how elements are drawn on the page, rather they are drawn by the browser starting at the top left corner of the element. Thus what we have done is drawn a box (the 'container') starting at the edge of the last relatively positioned div (or the screen), then drawn five more boxes (with the class 'boxes') also starting at that same left edge, then moved them to the left and right of that starting position using our position based classes.</p>
       </section>
       <section>
         <h4>Finding our Chi: <span class="sub-title">a.k.a. Getting Centered</span></h4>
@@ -91,13 +91,13 @@
   <pre>
 .container {
   position: relative;
-  height: 200px;
+  height: 300px;
   clear: both;
   width: 0px;
   margin: 0 auto;
 }
 .wrapper {
-  margin-left: -150px;
+  margin-left: -200px;
 }
   </pre>
 </code>
@@ -108,7 +108,7 @@
         <h4>Getting Dynamic</h4>
         <div class="col-xs-12 col-sm-6">
           <p>Great! Now that we've got the basics setup, we're just a touch of JS away from everything we've been waiting for. Since someday the goal here is to display images or other repeated elements full of data we'll want an array full of our items to display.</p>
-          <p>The other thing we are going to want is a way to keep track of which position of the items within the carousel. So we'll set an empty array and quickly fill it with the indicies of our items. Thus in the example provided, <code>carouselIndicies</code> looks like this: <code>[0, 1, 2, 3, 4, 5]</code></p>
+          <p>The other thing we are going to want is a way to keep track of the position of the items within the carousel. To do this we'll set an empty array and quickly fill it with the indicies of our items. Thus in the example provided, <code>carouselIndicies</code> looks like this: <code>[0, 1, 2, 3, 4, 5]</code></p>
         </div>
 <code class="col-xs-12 col-sm-6">
   <pre>
@@ -164,7 +164,7 @@ function moveCarousel(direction) {
         <div class="col-xs-12">
           <h4>The Final Countdown</h4>
           <div class="col-xs-12 col-sm-6">
-            <p>We will wrap the whole package (outside the div with class 'container') in another div adding fill color to the background, then and a negative z-index to our boxes so that those not currently being displayed will be hidden.</p>
+            <p>We will wrap the whole package (including the div with class 'container') in another div adding fill color to the background, then add a negative z-index to our boxes so that those not currently being displayed will be hidden.</p>
             <p>Lastly we add some transition properties to our box class to make things a bit smoother when moving elements around, and throw a couple of buttons underneath with click listeners attached for our <code>moveCarousel</code> function. The relevant classes should now resemble this: </p>
           </div>
 <code class="col-xs-12 col-sm-6">
@@ -178,8 +178,8 @@ function moveCarousel(direction) {
 .box {
   position: absolute;
   border: 1px solid black;
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 400px;
   z-index: -1;
   transition: transform 0.5s ease, z-index 0.2s linear;
   transform: perspective(200px) translateZ(-275px);

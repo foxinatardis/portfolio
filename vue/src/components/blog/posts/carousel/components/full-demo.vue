@@ -62,46 +62,46 @@ export default {
 </script>
 
 <style lang="css">
-.outer-container {
-  position: relative;
-  height: 300px;
-  clear: both;
-  width: 0px;
-  margin: 0 auto;
-}
-.wrapper {
-  margin-left: -200px;
-}
-.box {
-  position: absolute;
-  background-color: grey;
-  border: 1px solid black;
-  height: 300px;
-  width: 400px;
-  z-index: -1;
-  transition: transform 0.5s ease, z-index 0.2s linear;
-  transform: perspective(200px) translateZ(-275px);
-}
-.far-left {
-  transform: perspective(200px) translateZ(-175px) translateX(-47vw);
-  z-index: 3;
-}
-.left {
-  transform: perspective(200px) translateZ(-75px) translateX(-22vw);
-  z-index: 5;
-}
-.center {
-  transform: perspective(200px) translateZ(0px) translateX(0vw);
-  z-index: 7;
-}
-.right {
-  transform: perspective(200px) translateZ(-75px) translateX(22vw);
-  z-index: 5;
-}
-.far-right {
-  transform: perspective(200px) translateZ(-175px) translateX(47vw);
-  z-index: 3;
-}
+  .outer-container {
+    position: relative;
+    height: 300px;
+    clear: both;
+    width: 0px;
+    margin: 0 auto;
+  }
+  .wrapper {
+    margin-left: -200px;
+  }
+  .box {
+    position: absolute;
+    background-color: grey;
+    border: 1px solid black;
+    height: 300px;
+    width: 400px;
+    z-index: -1;
+    transition: transform 0.5s ease, z-index 0.2s linear;
+    transform: perspective(200px) translateZ(-275px);
+  }
+  .far-left {
+    transform: perspective(200px) translateZ(-175px) translateX(-47vw);
+    z-index: 3;
+  }
+  .left {
+    transform: perspective(200px) translateZ(-75px) translateX(-22vw);
+    z-index: 5;
+  }
+  .center {
+    transform: perspective(200px) translateZ(0px) translateX(0vw);
+    z-index: 7;
+  }
+  .right {
+    transform: perspective(200px) translateZ(-75px) translateX(22vw);
+    z-index: 5;
+  }
+  .far-right {
+    transform: perspective(200px) translateZ(-175px) translateX(47vw);
+    z-index: 3;
+  }
   .carousel-component {
     width: 100%;
     background-color: #eee;
