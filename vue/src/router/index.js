@@ -8,8 +8,6 @@ import Index from './index.template.vue'
 import About from '@/components/about/about'
 import NotFound from '@/components/not-found/not-found'
 
-import Carousel from '@/components/blog/posts/carousel/carousel'
-
 // Children of '/'
 import ProjectRoutes from '@/components/projects/projects.routes'
 import InterestRoutes from '@/components/interests/interests.routes'
@@ -38,11 +36,6 @@ export default new Router({
           path: '/about',
           name: 'About',
           component: About
-        },
-        {
-          path: '/carousel',
-          name: 'Carousel',
-          component: Carousel
         },
         ProjectRoutes,
         BlogRoutes,
