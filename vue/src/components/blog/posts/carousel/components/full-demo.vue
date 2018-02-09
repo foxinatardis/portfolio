@@ -10,7 +10,8 @@
             'right': (index === displayIndicies[3]),
             'far-right': (index === displayIndicies[4])
             }"
-            :style="{'background-color': item.color}">
+            :style="{'background-color': item.color}"
+          >
           </div>
         </div>
       </div>
@@ -63,20 +64,20 @@ export default {
 <style lang="css">
 .outer-container {
   position: relative;
-  height: 200px;
+  height: 300px;
   clear: both;
   width: 0px;
   margin: 0 auto;
 }
 .wrapper {
-  margin-left: -150px;
+  margin-left: -200px;
 }
 .box {
   position: absolute;
   background-color: grey;
   border: 1px solid black;
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 400px;
   z-index: -1;
   transition: transform 0.5s ease, z-index 0.2s linear;
   transform: perspective(200px) translateZ(-275px);

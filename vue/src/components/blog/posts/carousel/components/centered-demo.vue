@@ -18,20 +18,20 @@ export default {
 <style lang="css" scoped>
 .container {
   position: relative;
-  height: 200px;
+  height: 300px;
   clear: both;
   width: 0px;
   margin: 0 auto;
 }
 .wrapper {
-  margin-left: -150px;
+  margin-left: -200px;
 }
 .element {
   position: absolute;
   background-color: grey;
   border: 1px solid black;
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 400px;
 }
 .far-left {
   transform: perspective(200px) translateZ(-175px) translateX(-47vw);

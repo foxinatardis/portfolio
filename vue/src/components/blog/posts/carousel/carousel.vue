@@ -67,13 +67,13 @@
       </section>
       <section>
         <h4>What do we notice so far?</h4>
-        <p class="col-xs-12">Okay, so we are a bit off center... but you'll notice that the grey boxes that remain visible on the screen are already positioned nicely and react to the size of your viewport. If you resize your browser window you'll notice how they change position to accomodate the redefined space with pure CSS.</p>
-        <p class="col-xs-12">Next we will deal with our centering problem, but first a quick explaination for those who may not see what the cause is. Our CSS has translated the X coordinates of our elements based upon the center of the screen, but that is not how elements are drawn on the page, rather they are drawn by the browser starting at the top left corner of the element. Thus what we have done is drawn a box starting at the edge of the screen (the 'container'), then drawn five more boxes (the 'boxes') also starting at the left edge of the screen, then moved them to the left and right of that starting position using the position based classes.</p>
+        <p class="col-xs-12">Okay, so we are a bit off center... but you'll notice that the grey boxes that remain visible on the screen are already positioned nicely relative to eachother, and their position reacts to the size of your viewport. If you resize your browser window you'll notice how they change position to accomodate the redefined space with pure CSS.</p>
+        <p class="col-xs-12">Next we will deal with our centering problem, but first a quick explaination for those who may not see what the cause is. Our CSS has is designed to translate the X coordinates of our elements based upon the center of the screen, but that is not how elements are drawn on the page, rather they are drawn by the browser starting at the top left corner of the element. Thus what we have done is drawn a box (the 'container') starting at the edge of the last relatively positioned div (or the screen), then drawn five more boxes (with the class 'boxes') also starting at that same left edge, then moved them to the left and right of that starting position using our position based classes.</p>
       </section>
       <section>
         <h4>Finding our Chi: <span class="sub-title">a.k.a. Getting Centered</span></h4>
         <p class="col-xs-12">Since our boxes are absolutely positioned and are thus being drawn from the left edge of the closest relatively positioned element, what we really need to center is the container. By giving it a 'width' property and setting <code>margin: 0 auto;</code> we can start drawing our boxes from the center of the screen rather than the left hand edge. For those of you who are paying close attention, I know what you are thinking, "But Adam, if we start drawing the boxes from the center, aren't we putting the left edge of the box in the center of the screen? Won't that still be crooked and ugly?" Yes astutue reader, you are correct. But as a wise man once told me, "When all else fails, throw a div at it!"</p>
-        <p class="col-xs-12">If we add a wrapper around our boxes and position it half a box width to the left the whole thing wil appear centered. Check the code below for the changes:</p>
+        <p class="col-xs-12">If we add a wrapper around our boxes and position it half a box width to the left the whole thing will appear centered. Check the code below for the changes:</p>
 <code class="col-xs-12 col-sm-6">
   <pre>
 &lt;div class="container"&gt;
@@ -101,13 +101,14 @@
 }
   </pre>
 </code>
+<br>
         <centered-demo></centered-demo>
       </section>
       <section>
         <h4>Getting Dynamic</h4>
         <div class="col-xs-12 col-sm-6">
           <p>Great! Now that we've got the basics setup, we're just a touch of JS away from everything we've been waiting for. Since someday the goal here is to display images or other repeated elements full of data we'll want an array full of our items to display.</p>
-          <p>The other thing we are going to want is a way to keep track of which position of the items within the carousel. So we'll set an empty array and quickly fill it with the indicies of our items. Thus in the example provided, carouselIndicies looks like this: <code>[0, 1, 2, 3, 4, 5]</code></p>
+          <p>The other thing we are going to want is a way to keep track of which position of the items within the carousel. So we'll set an empty array and quickly fill it with the indicies of our items. Thus in the example provided, <code>carouselIndicies</code> looks like this: <code>[0, 1, 2, 3, 4, 5]</code></p>
         </div>
 <code class="col-xs-12 col-sm-6">
   <pre>
@@ -124,20 +125,22 @@ items.forEach((item, index) => carouselIndicies.push(index));
   </pre>
 </code>
         <div class="col-xs-12">
-          <p>Now we just need to loop over our items and dynamically assign our position classes. Then create a small function to change the position of our carousel items when the user clicks in the appropriate box. For fun we can fill our boxes with a style binding to add some color. Using Vue as our framework it will look something like this: </p>
+          <p>Now we just need to loop over our items and dynamically assign our position classes. Then we'll create a small function to change the position of our carousel items when the user clicks in the appropriate place. For fun we can fill our boxes with a style binding to add some color. Using Vue as our framework it will look something like this: </p>
         </div>
 <code class="col-xs-12 col-sm-6">
   <pre>
     &lt;div v-for="item in items"
-    :key="item.name"
-    :class="{
-      'far-left': (index === carouselIndicies[0]),
-      'left': (index === carouselIndicies[1]),
-      'center': (index === carouselIndicies[2]),
-      'right': (index === carouselIndicies[3]),
-      'far-right': (index === carouselIndicies[4])
-    }"
-    :style="{'background-color': item.color}"&gt;
+      class="box"
+      :key="item.name"
+      :class="{
+        'far-left': (index === carouselIndicies[0]),
+        'left': (index === carouselIndicies[1]),
+        'center': (index === carouselIndicies[2]),
+        'right': (index === carouselIndicies[3]),
+        'far-right': (index === carouselIndicies[4])
+      }"
+      :style="{'background-color': item.color}"
+    &gt;
     &lt;/div&gt;
   </pre>
 </code>
@@ -161,8 +164,8 @@ function moveCarousel(direction) {
         <div class="col-xs-12">
           <h4>The Final Countdown</h4>
           <div class="col-xs-12 col-sm-6">
-            <p>We will wrap the whole package in another div adding fill color to the background, then and a negative z-index to our boxes so that those not currently being displayed will be hidden.</p>
-            <p>Lastly we add some transition properties to our box class to make things a bit smoother when moving elements around, and throw a couple of buttons underneath with click listeners attached for our 'moveCarousel' function. The relevant classes should now resemble this: </p>
+            <p>We will wrap the whole package (outside the div with class 'container') in another div adding fill color to the background, then and a negative z-index to our boxes so that those not currently being displayed will be hidden.</p>
+            <p>Lastly we add some transition properties to our box class to make things a bit smoother when moving elements around, and throw a couple of buttons underneath with click listeners attached for our <code>moveCarousel</code> function. The relevant classes should now resemble this: </p>
           </div>
 <code class="col-xs-12 col-sm-6">
   <pre>
@@ -190,6 +193,7 @@ function moveCarousel(direction) {
           <full-demo></full-demo>
         </div>
       </section>
+      <div class="divider col-xs-12"></div>
       <section>
         <div class="col-xs-12">
           <h4>A Few Things to Remember</h4>
@@ -243,13 +247,17 @@ export default {
 </script>
 
 <style lang="css">
-  .parents {
+  code {
+    margin-bottom: 20px;
+    background-color: inherit;
+  }
+  /*.parents {
     height: 300px;
     width: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  }*/
   pre {
     margin: 0px 20px;
   }
@@ -260,6 +268,7 @@ export default {
     margin: 25px 0;
   }
   h4 {
+    margin-top: 20px;
     font-weight: bold;
   }
 </style>
