@@ -5,6 +5,7 @@
       <section>
         <h4>More than a great 80's song?</h4>
         <p>While 'Round and Round' may be one of the most recognized of singles by 80's hair band Ratt, that is not what this blog post is about. I am here to talk about CSS in 3D and how simple it can be for creating a great carousel display especially in the context of a modern front end framework.</p>
+        <p><strong>Note: </strong>To keep the code here brief this demo is targeted at the Chrome browser, as such, it may not display correctly in all browsers. Always keep in mind different browser configurations, capabilities, and requirements when customizing your CSS.</p>
       </section>
       <section>
         <h4>The Backstory <span class="sub-title">(feel free to skip this and scroll to the good parts)</span></h4>
@@ -41,23 +42,23 @@
   width: 400px;
 }
 .far-left {
-  transform: perspective(200px) translateZ(-175px) translateX(-47vw);
+  transform: perspective(200px) translateX(-47vw) translateZ(-175px);
   z-index: 3;
 }
 .left {
-  transform: perspective(200px) translateZ(-75px) translateX(-22vw);
+  transform: perspective(200px) translateX(-22vw) translateZ(-75px);
   z-index: 5;
 }
 .center {
-  transform: perspective(200px) translateZ(0px) translateX(0vw);
+  transform: perspective(200px) translateX(0vw) translateZ(0px);
   z-index: 7;
 }
 .right {
-  transform: perspective(200px) translateZ(-75px) translateX(22vw);
+  transform: perspective(200px) translateX(22vw) translateZ(-75px);
   z-index: 5;
 }
 .far-right {
-  transform: perspective(200px) translateZ(-175px) translateX(47vw);
+  transform: perspective(200px) translateX(47vw) translateZ(-175px);
   z-index: 3;
 }
           </pre>
@@ -164,8 +165,9 @@ function moveCarousel(direction) {
         <div class="col-xs-12">
           <h4>The Final Countdown</h4>
           <div class="col-xs-12 col-sm-6">
-            <p>We will wrap the whole package (including the div with class 'container') in another div adding fill color to the background, then add a negative z-index to our boxes so that those not currently being displayed will be hidden.</p>
-            <p>Lastly we add some transition properties to our box class to make things a bit smoother when moving elements around, and throw a couple of buttons underneath with click listeners attached for our <code>moveCarousel</code> function. The relevant classes should now resemble this: </p>
+            <p>We will wrap the whole package (including the div with class 'container') in another div adding fill color to the background. We add a negative z-index to our boxes by default so that those not currently being displayed by our position classes will be hidden behind our background-color.</p>
+            <p>Lastly we add some transition properties to our box class to make things a bit smoother when moving elements around, and throw a couple of buttons underneath with click listeners attached for our <code>moveCarousel</code> function.</p>
+            <p><strong>Note: </strong>I have re-written our <code>translateX</code> and <code>translateZ</code> as <code>translate3d</code> to save space. The effect is the same, we simply provide the X, Y, and Z translations separated by commas in the parenthesis. The relevant classes should now resemble this: </p>
           </div>
 <code class="col-xs-12 col-sm-6">
   <pre>
@@ -182,7 +184,7 @@ function moveCarousel(direction) {
   width: 400px;
   z-index: -1;
   transition: transform 0.5s ease, z-index 0.2s linear;
-  transform: perspective(200px) translateZ(-275px);
+  transform: perspective(200px) translate3d(0px, 0px, -275px);
 }
   </pre>
 </code>
@@ -198,9 +200,6 @@ function moveCarousel(direction) {
         <div class="col-xs-12">
           <h4>A Few Things to Remember</h4>
           <div class="col-xs-12">
-            <p>
-              Always be wary of cross-browser support and how different browsers will render things. Certain readers may not have made it this far into the post, I haven't had time to go through Safari testing and modern Firefox browsers will do strange things if you attempt to engage your transforms too quickly.
-            </p>
             <p>
                You almost never want to use 'translateZ' with a positive value as it can cause some ugly distortions especially with text. Instead change the 'perspective' value and move items away from you as appropriate.
             </p>
