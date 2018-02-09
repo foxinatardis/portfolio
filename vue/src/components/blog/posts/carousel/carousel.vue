@@ -205,6 +205,9 @@ function moveCarousel(direction) {
               Be careful when using a timeout for automatic carousel movement, be sure to reset the timeout when the user clicks one of the arrows so they don't move the image only to have your timeout immediately move it again. At the time of writing, <a href="livenation.com">livenation.com</a> still has not resolved the setTimeout issue on their homepage carousel so if you play around with it a bit you'll find that occasionally it will jump unexpectedly.
             </p>
             <p>
+              You can find the source code for the completed demo-component on my GitHub account: <a href="https://github.com/foxinatardis/vue-carousel-demo">Vue Carousel Demo</a>.
+            </p>
+            <p>
               If you want a great resource on some other things you can do with 3D CSS transforms, check out the work by <a href="https://desandro.github.io/3dtransforms/docs/introduction.html">David DeSandro</a>. He's got some neat stuff up there that is really fun to play with.
             </p>
           </div>
