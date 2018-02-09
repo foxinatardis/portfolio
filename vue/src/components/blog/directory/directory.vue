@@ -5,6 +5,7 @@
      </div>
    </div>
    <div class="container content">
+     <carousel></carousel>
      <traffic-circle></traffic-circle>
      <promises></promises>
    </div>
@@ -14,11 +15,13 @@
 <script>
 import PromisesSummary from '@/components/blog/posts/promises/promises.summary'
 import TrafficCircleSummary from '@/components/blog/posts/traffic-circle/traffic-circle.summary'
+import CarouselSummary from '@/components/blog/posts/carousel/carousel.summary'
 export default {
   name: 'BlogDirectory',
   components: {
     'promises': PromisesSummary,
-    'traffic-circle': TrafficCircleSummary
+    'traffic-circle': TrafficCircleSummary,
+    'carousel': CarouselSummary
   }
 }
 </script>

@@ -1,16 +1,16 @@
 <template lang="html">
   <div class="carousel-component">
-    <div class="carousel-wrapper">
-      <div class="inner-wrapper">
+    <div class="outer-container">
+      <div class="wrapper">
         <div v-for="(item, index) in items" :key="index">
-          <div class="item" v-bind:class="{
+          <div class="box" v-bind:class="{
             'far-left': (index === displayIndicies[0]),
             'left': (index === displayIndicies[1]),
             'center': (index === displayIndicies[2]),
             'right': (index === displayIndicies[3]),
             'far-right': (index === displayIndicies[4])
-            }">
-            <slot v-bind="item"></slot>
+            }"
+            :style="{'background-color': item.color}">
           </div>
         </div>
       </div>
@@ -30,9 +30,16 @@
 
 <script>
 export default {
-  props: ['items'],
   data () {
     return {
+      items: [
+        { name: 'item 1', color: 'blue' },
+        { name: 'item 2', color: 'red' },
+        { name: 'item 3', color: 'green' },
+        { name: 'item 4', color: 'pink' },
+        { name: 'item 5', color: 'yellow' },
+        { name: 'item 6', color: 'orange' }
+      ],
       displayIndicies: []
     }
   },
@@ -54,50 +61,54 @@ export default {
 </script>
 
 <style lang="css">
-  .carousel-wrapper {
-    position: relative;
-    text-align: center;
-  }
-  .inner-wrapper {
-    display: inline-block;
-    margin-left: -500px;
-
-  }
-  .item {
-    position: absolute;
-    perspective-origin: center;
-    z-index: -1;
-    transition: transform 0.5s ease, z-index 0.2s linear;
-    transform: perspective(200px) translateZ(-275px);
-  }
-  .far-left {
-    transform: perspective(200px) translateZ(-175px) translateX(-47vw);
-    z-index: 3;
-  }
-  .left {
-    transform: perspective(200px) translateZ(-75px) translateX(-22vw);
-    z-index: 5;
-  }
-  .center {
-    transform: perspective(200px) translateZ(0px) translateX(0vw);
-    z-index: 7;
-  }
-  .right {
-    transform: perspective(200px) translateZ(-75px) translateX(22vw);
-    z-index: 5;
-  }
-  .far-right {
-    transform: perspective(200px) translateZ(-175px) translateX(47vw);
-    z-index: 3;
-  }
+.outer-container {
+  position: relative;
+  height: 200px;
+  clear: both;
+  width: 0px;
+  margin: 0 auto;
+}
+.wrapper {
+  margin-left: -150px;
+}
+.box {
+  position: absolute;
+  background-color: grey;
+  border: 1px solid black;
+  height: 200px;
+  width: 300px;
+  z-index: -1;
+  transition: transform 0.5s ease, z-index 0.2s linear;
+  transform: perspective(200px) translateZ(-275px);
+}
+.far-left {
+  transform: perspective(200px) translateZ(-175px) translateX(-47vw);
+  z-index: 3;
+}
+.left {
+  transform: perspective(200px) translateZ(-75px) translateX(-22vw);
+  z-index: 5;
+}
+.center {
+  transform: perspective(200px) translateZ(0px) translateX(0vw);
+  z-index: 7;
+}
+.right {
+  transform: perspective(200px) translateZ(-75px) translateX(22vw);
+  z-index: 5;
+}
+.far-right {
+  transform: perspective(200px) translateZ(-175px) translateX(47vw);
+  z-index: 3;
+}
   .carousel-component {
-    height: 300px;
     width: 100%;
     background-color: #eee;
+    margin-bottom: 50px;
   }
   .button-wrapper {
-    margin: 300px;
-    margin-left: 50vw;
+    width: 0;
+    margin: 0 auto;
     position: relative;
   }
   .carousel-btn {
