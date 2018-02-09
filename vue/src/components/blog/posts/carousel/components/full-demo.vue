@@ -78,6 +78,7 @@ export default {
     clear: both;
     width: 0px;
     margin: 0 auto;
+    perspective: 200px;
   }
   .wrapper {
     margin-left: -200px;
@@ -90,50 +91,50 @@ export default {
     width: 400px;
     z-index: -1;
     transition: transform 0.5s ease, z-index 0.2s linear;
-    -o-transform: perspective(200px) translate3d(0px, 0px, -275px);
-    -moz-transform: perspective(200px) translate3d(0px, 0px, -275px);
-    -webkit-transform: perspective(200px) translate3d(0px, 0px, -275px);
-    -ms-transform: perspective(200px) translate3d(0px, 0px, -275px);
-    transform: perspective(200px) translate3d(0px, 0px, -275px);
+    -o-transform: translate3d(0px, 0px, -275px);
+    -moz-transform: translate3d(0px, 0px, -275px);
+    -webkit-transform: translate3d(0px, 0px, -275px);
+    -ms-transform: translate3d(0px, 0px, -275px);
+    transform: translate3d(0px, 0px, -275px);
   }
   .far-left {
-    -o-transform: perspective(200px) translate3d(-47vw, 0px, -175px);
-    -moz-transform: perspective(200px) translate3d(-47vw, 0px, -175px);
-    -webkit-transform: perspective(200px) translate3d(-47vw, 0px, -175px);
-    -ms-transform: perspective(200px) translate3d(-47vw, 0px, -175px);
-    transform: perspective(200px) translate3d(-47vw, 0px, -175px);
+    -o-transform: translate3d(-47vw, 0px, -175px);
+    -moz-transform: translate3d(-47vw, 0px, -175px);
+    -webkit-transform: translate3d(-47vw, 0px, -175px);
+    -ms-transform: translate3d(-47vw, 0px, -175px);
+    transform: translate3d(-47vw, 0px, -175px);
     z-index: 3;
   }
   .left {
-    -o-transform: perspective(200px) translate3d(-22vw, 0px, -75px);
-    -moz-transform: perspective(200px) translate3d(-22vw, 0px, -75px);
-    -webkit-transform: perspective(200px) translate3d(-22vw, 0px, -75px);
-    -ms-transform: perspective(200px) translate3d(-22vw, 0px, -75px);
-    transform: perspective(200px) translate3d(-22vw, 0px, -75px);
+    -o-transform: translate3d(-22vw, 0px, -75px);
+    -moz-transform: translate3d(-22vw, 0px, -75px);
+    -webkit-transform: translate3d(-22vw, 0px, -75px);
+    -ms-transform: translate3d(-22vw, 0px, -75px);
+    transform: translate3d(-22vw, 0px, -75px);
     z-index: 5;
   }
   .center {
-    -o-transform: perspective(200px) translate3d(0vw, 0px, 0px);
-    -moz-transform: perspective(200px) translate3d(0vw, 0px, 0px);
-    -webkit-transform: perspective(200px) translate3d(0vw, 0px, 0px);
-    -ms-transform: perspective(200px) translate3d(0vw, 0px, 0px);
-    transform: perspective(200px) translate3d(0vw, 0px, 0px);
+    -o-transform: translate3d(0vw, 0px, 0px);
+    -moz-transform: translate3d(0vw, 0px, 0px);
+    -webkit-transform: translate3d(0vw, 0px, 0px);
+    -ms-transform: translate3d(0vw, 0px, 0px);
+    transform: translate3d(0vw, 0px, 0px);
     z-index: 7;
   }
   .right {
-    -o-transform: perspective(200px) translate3d(22vw, 0px, -75px);
-    -moz-transform: perspective(200px) translate3d(22vw, 0px, -75px);
-    -webkit-transform: perspective(200px) translate3d(22vw, 0px, -75px);
-    -ms-transform: perspective(200px) translate3d(22vw, 0px, -75px);
-    transform: perspective(200px) translate3d(22vw, 0px, -75px);
+    -o-transform: translate3d(22vw, 0px, -75px);
+    -moz-transform: translate3d(22vw, 0px, -75px);
+    -webkit-transform: translate3d(22vw, 0px, -75px);
+    -ms-transform: translate3d(22vw, 0px, -75px);
+    transform: translate3d(22vw, 0px, -75px);
     z-index: 5;
   }
   .far-right {
-    -o-transform: perspective(200px) translate3d(47vw, 0px, -175px);
-    -moz-transform: perspective(200px) translate3d(47vw, 0px, -175px);
-    -webkit-transform: perspective(200px) translate3d(47vw, 0px, -175px);
-    -ms-transform: perspective(200px) translate3d(47vw, 0px, -175px);
-    transform: perspective(200px) translate3d(47vw, 0px, -175px);
+    -o-transform: translate3d(47vw, 0px, -175px);
+    -moz-transform: translate3d(47vw, 0px, -175px);
+    -webkit-transform: translate3d(47vw, 0px, -175px);
+    -ms-transform: translate3d(47vw, 0px, -175px);
+    transform: translate3d(47vw, 0px, -175px);
     z-index: 3;
   }
   .carousel-component {

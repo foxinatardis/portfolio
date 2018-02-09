@@ -33,6 +33,7 @@
   position: relative;
   height: 300px;
   clear: both;
+  transform: perspective(200px)
 }
 .boxes {
   position: absolute;
@@ -42,28 +43,28 @@
   width: 400px;
 }
 .far-left {
-  transform: perspective(200px) translateX(-47vw) translateZ(-175px);
+  transform: translateX(-47vw) translateZ(-175px);
   z-index: 3;
 }
 .left {
-  transform: perspective(200px) translateX(-22vw) translateZ(-75px);
+  transform: translateX(-22vw) translateZ(-75px);
   z-index: 5;
 }
 .center {
-  transform: perspective(200px) translateX(0vw) translateZ(0px);
+  transform: translateX(0vw) translateZ(0px);
   z-index: 7;
 }
 .right {
-  transform: perspective(200px) translateX(22vw) translateZ(-75px);
+  transform: translateX(22vw) translateZ(-75px);
   z-index: 5;
 }
 .far-right {
-  transform: perspective(200px) translateX(47vw) translateZ(-175px);
+  transform: translateX(47vw) translateZ(-175px);
   z-index: 3;
 }
           </pre>
         </code>
-        <p class="col-xs-12">You can see below what this early stage looks like.</p>
+        <p class="col-xs-12">We have set a perspective on our container element to give a starting distance from the viewport from which to render our elements, then we will move our boxes along the X and Z axis to spread them out from either side of the center box. You can see below what this early stage looks like.</p>
         <static-demo></static-demo>
       </section>
       <section>
@@ -96,6 +97,7 @@
   clear: both;
   width: 0px;
   margin: 0 auto;
+  transform: perspective(200px);
 }
 .wrapper {
   margin-left: -200px;
@@ -184,7 +186,7 @@ function moveCarousel(direction) {
   width: 400px;
   z-index: -1;
   transition: transform 0.5s ease, z-index 0.2s linear;
-  transform: perspective(200px) translate3d(0px, 0px, -275px);
+  transform: translate3d(0px, 0px, -275px);
 }
   </pre>
 </code>
@@ -201,16 +203,19 @@ function moveCarousel(direction) {
           <h4>A Few Things to Remember</h4>
           <div class="col-xs-12">
             <p>
-               You almost never want to use 'translateZ' with a positive value as it can cause some ugly distortions especially with text. Instead change the 'perspective' value and move items away from you as appropriate.
+              Be careful when using a timeout for automatic carousel movement, be sure to reset the timeout when the user clicks one of the arrows. Otherwise your user may transition the carousel only to have your timeout immediately move it again. At the time of writing, <a href="livenation.com">livenation.com</a> still has not resolved the setTimeout issue on their homepage carousel so if you play around with it a bit you'll find that occasionally it will jump unexpectedly.
             </p>
             <p>
-              Be careful when using a timeout for automatic carousel movement, be sure to reset the timeout when the user clicks one of the arrows so they don't move the image only to have your timeout immediately move it again. At the time of writing, <a href="livenation.com">livenation.com</a> still has not resolved the setTimeout issue on their homepage carousel so if you play around with it a bit you'll find that occasionally it will jump unexpectedly.
-            </p>
-            <p>
-              You can find the source code for the completed demo-component on my GitHub account: <a href="https://github.com/foxinatardis/vue-carousel-demo">Vue Carousel Demo</a>.
+              You can find the source code for the completed demo-component on my GitHub account: <a href="https://github.com/foxinatardis/vue-carousel-demo">Vue Carousel Demo</a>. Feel free to download it and play around with it if you want.
             </p>
             <p>
               If you want a great resource on some other things you can do with 3D CSS transforms, check out the work by <a href="https://desandro.github.io/3dtransforms/docs/introduction.html">David DeSandro</a>. He's got some neat stuff up there that is really fun to play with.
+            </p>
+            <p>
+              For the sake of brevity and saving time in writing this post, I have made some compromises in browser compatability and precise execution of the CSS. Be sure to test your code in different environments when using these examples as a starting point. The resource above can be a great next step, also <a href="google.com">Google</a>, and <a href="stackoverflow.com">StackOverflow</a> are your friends.
+            </p>
+            <p>
+              If you want to have some real fun with moving elements around the page I highly recommend <a href="http://velocityjs.org/">VelocityJS</a>.
             </p>
           </div>
         </div>
@@ -219,7 +224,7 @@ function moveCarousel(direction) {
         <div class="col-xs-12">
           <h5>Posted By: Adam Belliveau</h5>
           <h5>Feb. 8, 2017</h5>
-          <p>Any questions or comments? Contact me at <a href="mailto:abellive@me.com">abellive@me.com</a></p>
+          <h6>Any questions or comments? Contact me at <a href="mailto:abellive@me.com">abellive@me.com</a></h6>
         </div>
       </section>
     </div>
