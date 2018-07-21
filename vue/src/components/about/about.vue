@@ -36,57 +36,60 @@
 </template>
 
 <script>
-export default {
-  name: 'About',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+
+    export default {
+        name: 'About',
+        data () {
+            return {
+                msg: 'Welcome to Your Vue.js App'
+            };
+        }
+    };
+
 </script>
 
 <style scoped>
-  .jumbotron {
-    background: url('/static/intro_pics/mountain-biking.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
 
-  img.circle {
-    border-radius: 100%;
-    margin: auto;
-    width: 100%;
-  }
+    .jumbotron {
+        background: url('/static/intro_pics/mountain-biking.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
-  .caption {
-    text-align: center;
-    margin-top: 10px;
-  }
+    img.circle {
+        border-radius: 100%;
+        margin: auto;
+        width: 100%;
+    }
 
-  .picture-holder {
-    margin-top: 20px;
-    padding: 0 7%;
-  }
+    .caption {
+        text-align: center;
+        margin-top: 10px;
+    }
 
-  .indent {
-    padding: 5px 10px;
-  }
+    .picture-holder {
+        margin-top: 20px;
+        padding: 0 7%;
+    }
 
-  .icon-link {
-    font-size: 3em;
-    display: inline-block;
-    margin: 0 10px;
-  }
+    .indent {
+        padding: 5px 10px;
+    }
 
-  .icon-link:hover {
-    color: #39f;
-  }
+    .icon-link {
+        font-size: 3em;
+        display: inline-block;
+        margin: 0 10px;
+    }
 
-  .header {
-    text-align: center;
-    color: #333;
-  }
+    .icon-link:hover {
+        color: #39f;
+    }
+
+    .header {
+        text-align: center;
+        color: #333;
+    }
 
 </style>
