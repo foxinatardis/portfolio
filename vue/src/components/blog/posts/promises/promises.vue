@@ -63,22 +63,26 @@
 </template>
 
 <script>
-export default {
-  name: 'Promises'
-}
+
+    export default {
+        name: 'Promises'
+    };
+
 </script>
 
 <style lang="css" scoped>
-  pre {
-    margin: 0px 20px;
-  }
-  .sub-title {
-    font-size: 0.8em;
-  }
-  section {
-    margin: 25px 0;
-  }
-  h4 {
-    font-weight: bold;
-  }
+
+    pre {
+        margin: 0px 20px;
+    }
+    .sub-title {
+        font-size: 0.8em;
+    }
+    section {
+        margin: 25px 0;
+    }
+    h4 {
+        font-weight: bold;
+    }
+
 </style>

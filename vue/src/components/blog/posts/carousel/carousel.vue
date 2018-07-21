@@ -232,53 +232,51 @@ function moveCarousel(direction) {
 </template>
 
 <script>
-import StaticDemo from './components/static-demo.vue'
-import CenteredDemo from './components/centered-demo.vue'
-import FullDemo from './components/full-demo.vue'
-export default {
-  components: {
-    StaticDemo,
-    CenteredDemo,
-    FullDemo
-  },
-  data () {
-    return {
-      items: [
-        {name: 'far-left', color: 'blue', text: 'FooBar'},
-        {name: 'left', color: 'green'},
-        {name: 'center', color: 'red'},
-        {name: 'right', color: 'violet'},
-        {name: 'far-right', color: 'cyan'},
-        {name: '', color: 'darkslategray'}
-      ]
-    }
-  }
-}
+
+    import StaticDemo from './components/static-demo.vue';
+    import CenteredDemo from './components/centered-demo.vue';
+    import FullDemo from './components/full-demo.vue';
+
+    export default {
+        components: {
+            StaticDemo,
+            CenteredDemo,
+            FullDemo
+        },
+        data () {
+            return {
+                items: [
+                    { name: 'far-left', color: 'blue', text: 'FooBar' },
+                    { name: 'left', color: 'green' },
+                    { name: 'center', color: 'red' },
+                    { name: 'right', color: 'violet' },
+                    { name: 'far-right', color: 'cyan' },
+                    { name: '', color: 'darkslategray' }
+                ]
+            };
+        }
+    };
+
 </script>
 
 <style lang="css">
-  code {
-    margin-bottom: 20px;
-    background-color: inherit;
-  }
-  /*.parents {
-    height: 300px;
-    width: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }*/
-  pre {
-    margin: 0px 20px;
-  }
-  .sub-title {
-    font-size: 0.8em;
-  }
-  section {
-    margin: 25px 0;
-  }
-  h4 {
-    margin-top: 20px;
-    font-weight: bold;
-  }
+
+    code {
+        margin-bottom: 20px;
+        background-color: inherit;
+    }
+    pre {
+        margin: 0px 20px;
+    }
+    .sub-title {
+        font-size: 0.8em;
+    }
+    section {
+        margin: 25px 0;
+    }
+    h4 {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
 </style>

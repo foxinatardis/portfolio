@@ -13,9 +13,11 @@
 </template>
 
 <script>
-  export default {
-    name: 'MountainBiking'
-  }
+
+    export default {
+        name: 'MountainBiking'
+    };
+
 </script>
 
 <style lang="css">

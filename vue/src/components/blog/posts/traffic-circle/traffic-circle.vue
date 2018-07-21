@@ -172,25 +172,29 @@ app.listen(process.env.PORT || 8000);</pre>
 </template>
 
 <script>
-  export default {
-    name: 'TrafficCircle'
-  }
+
+    export default {
+        name: 'TrafficCircle'
+    };
+
 </script>
 
 <style lang="css" scoped>
-  code {
-    padding: 0px 15px;
-  }
-  pre {
-    margin: 0px 20px;
-  }
-  .sub-title {
-    font-size: 0.8em;
-  }
-  section {
-    margin: 25px 0;
-  }
-  h4 {
-    font-weight: bold;
-  }
+
+    code {
+        padding: 0px 15px;
+    }
+    pre {
+        margin: 0px 20px;
+    }
+    .sub-title {
+        font-size: 0.8em;
+    }
+    section {
+        margin: 25px 0;
+    }
+    h4 {
+        font-weight: bold;
+    }
+
 </style>
