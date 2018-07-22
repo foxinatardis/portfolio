@@ -68,7 +68,6 @@
   },
   "browserslist": [
     "> 1%",
-    "since 2015",
     "not ie <= 8"
   ]
 }
