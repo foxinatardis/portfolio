@@ -29,7 +29,7 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
     >>> .img-responsive {
         border-radius: 5px;

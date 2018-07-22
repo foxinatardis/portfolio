@@ -20,5 +20,5 @@
 
 </script>
 
-<style lang="css">
+<style lang="postcss" scoped>
 </style>

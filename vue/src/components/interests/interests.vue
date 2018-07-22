@@ -18,7 +18,7 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
     .jumbotron {
         background: url('/static/portfolio_pics/sitting-climbing-quarter-size.jpg');

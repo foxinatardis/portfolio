@@ -51,14 +51,17 @@
 
 </script>
 
-<style scoped lang="css">
+<style scoped lang="postcss">
 
-    .festpass > .container > p {
-        margin: 24px 0 24px 0;
-    }
-
-    .festpass li {
-        margin-top: 5px;
+    .festpass {
+        .container-fluid {
+            p {
+                margin: 24px 0 24px 4px;
+            }
+        }
+        li {
+            margin-top: 5px;
+        }
     }
 
 </style>

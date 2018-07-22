@@ -16,7 +16,7 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
     .container {
         position: relative;
@@ -25,56 +25,39 @@
         width: 0px;
         margin: 0 auto;
         perspective: 200px;
-    }
-    .wrapper {
-        margin-left: -200px;
-    }
-    .element {
-        position: absolute;
-        background-color: grey;
-        border: 1px solid black;
-        height: 300px;
-        width: 400px;
-    }
-    .far-left {
-        -o-transform: translate3d(-47vw, 0px, -175px);
-        -moz-transform: translate3d(-47vw, 0px, -175px);
-        -webkit-transform: translate3d(-47vw, 0px, -175px);
-        -ms-transform: translate3d(-47vw, 0px, -175px);
-        transform: translate3d(-47vw, 0px, -175px);
-        z-index: 3;
-    }
-    .left {
-        -o-transform: translate3d(-22vw, 0px, -75px);
-        -moz-transform: translate3d(-22vw, 0px, -75px);
-        -webkit-transform: translate3d(-22vw, 0px, -75px);
-        -ms-transform: translate3d(-22vw, 0px, -75px);
-        transform: translate3d(-22vw, 0px, -75px);
-        z-index: 5;
-    }
-    .center {
-        -o-transform: translate3d(0vw, 0px, 0px);
-        -moz-transform: translate3d(0vw, 0px, 0px);
-        -webkit-transform: translate3d(0vw, 0px, 0px);
-        -ms-transform: translate3d(0vw, 0px, 0px);
-        transform: translate3d(0vw, 0px, 0px);
-        z-index: 7;
-    }
-    .right {
-        -o-transform: translate3d(22vw, 0px, -75px);
-        -moz-transform: translate3d(22vw, 0px, -75px);
-        -webkit-transform: translate3d(22vw, 0px, -75px);
-        -ms-transform: translate3d(22vw, 0px, -75px);
-        transform: translate3d(22vw, 0px, -75px);
-        z-index: 5;
-    }
-    .far-right {
-        -o-transform: translate3d(47vw, 0px, -175px);
-        -moz-transform: translate3d(47vw, 0px, -175px);
-        -webkit-transform: translate3d(47vw, 0px, -175px);
-        -ms-transform: translate3d(47vw, 0px, -175px);
-        transform: translate3d(47vw, 0px, -175px);
-        z-index: 3;
+
+        .wrapper {
+            margin-left: -200px;
+
+            .element {
+                position: absolute;
+                background-color: grey;
+                border: 1px solid black;
+                height: 300px;
+                width: 400px;
+
+                &.far-left {
+                    transform: translate3d(-47vw, 0px, -175px);
+                    z-index: 3;
+                }
+                &.left {
+                    transform: translate3d(-22vw, 0px, -75px);
+                    z-index: 5;
+                }
+                &.center {
+                    transform: translate3d(0vw, 0px, 0px);
+                    z-index: 7;
+                }
+                &.right {
+                    transform: translate3d(22vw, 0px, -75px);
+                    z-index: 5;
+                }
+                &.far-right {
+                    transform: translate3d(47vw, 0px, -175px);
+                    z-index: 3;
+                }
+            }
+        }
     }
 
 </style>

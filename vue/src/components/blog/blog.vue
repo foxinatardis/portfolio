@@ -12,7 +12,7 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
     >>> .jumbotron {
         background: url('/static/images/video-card.jpg');
