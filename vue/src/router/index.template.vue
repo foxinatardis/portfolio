@@ -12,16 +12,16 @@
 
 </script>
 
-<style lang="css">
+<style lang="postcss" scoped>
 
-    .jumbotron {
+    >>> .jumbotron {
         z-index: 1;
         position: fixed;
         top: 50px;
         width: 100%;
         padding-bottom: 40vh;
     }
-    .content {
+    >>> .content {
         z-index: 2;
         width: 100%;
         background-color: #eee;

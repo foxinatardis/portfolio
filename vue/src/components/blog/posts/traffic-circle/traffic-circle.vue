@@ -179,7 +179,7 @@ app.listen(process.env.PORT || 8000);</pre>
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
     code {
         padding: 0px 15px;

@@ -70,7 +70,7 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
     pre {
         margin: 0px 20px;

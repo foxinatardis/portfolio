@@ -32,12 +32,16 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
-    .themdg > .container > p {
-        display: block;
-        margin: 24px 0 24px 0;
-        clear: left;
+    .themdg {
+        .container {
+            p {
+                display: block;
+                margin: 24px 0 24px 0;
+                clear: left;
+            }
+        }
     }
 
 </style>

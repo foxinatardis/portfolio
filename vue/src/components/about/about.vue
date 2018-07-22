@@ -38,58 +38,53 @@
 <script>
 
     export default {
-        name: 'About',
-        data () {
-            return {
-                msg: 'Welcome to Your Vue.js App'
-            };
-        }
+        name: 'About'
     };
 
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 
     .jumbotron {
         background: url('/static/intro_pics/mountain-biking.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-    }
 
-    img.circle {
-        border-radius: 100%;
-        margin: auto;
-        width: 100%;
-    }
+        .header {
+            text-align: center;
+            color: #333;
 
-    .caption {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .picture-holder {
-        margin-top: 20px;
-        padding: 0 7%;
+            .icon-link {
+                font-size: 3em;
+                display: inline-block;
+                margin: 0 10px;
+                &:hover {
+                    color: #39f;
+                }
+            }
+        }
     }
 
     .indent {
         padding: 5px 10px;
     }
 
-    .icon-link {
-        font-size: 3em;
-        display: inline-block;
-        margin: 0 10px;
-    }
+    .picture-holder {
+        margin-top: 20px;
+        padding: 0 7%;
 
-    .icon-link:hover {
-        color: #39f;
-    }
-
-    .header {
-        text-align: center;
-        color: #333;
+        img {
+            &.circle {
+                border-radius: 100%;
+                margin: auto;
+                width: 100%;
+            }
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+        }
     }
 
 </style>

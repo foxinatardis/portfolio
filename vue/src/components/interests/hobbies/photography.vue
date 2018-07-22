@@ -81,10 +81,12 @@
 
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 
-    .adventure-photography h2 {
-        margin-bottom: 30px;
+    .adventure-photography {
+        h2 {
+            margin-bottom: 30px;
+        }
     }
 
 </style>

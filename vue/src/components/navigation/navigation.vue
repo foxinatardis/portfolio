@@ -51,7 +51,7 @@
 
 </script>
 
-<style>
+<style lang="postcss" scoped>
 
     .nav-spacer {
         height: 50px;

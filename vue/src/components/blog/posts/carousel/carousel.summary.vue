@@ -19,7 +19,7 @@
 
 </script>
 
-<style lang="css">
+<style lang="postcss" scoped>
 
     .image-spacer {
         margin-bottom: 20px;

@@ -259,7 +259,7 @@ function moveCarousel(direction) {
 
 </script>
 
-<style lang="css">
+<style lang="postcss" scoped>
 
     code {
         margin-bottom: 20px;
