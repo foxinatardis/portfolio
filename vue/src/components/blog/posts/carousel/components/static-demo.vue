@@ -30,32 +30,22 @@ export default {};
             width: 400px;
 
             &.far-left {
-                -ms-transform: translate3d(-47vw, 0, -175px);
-                -webkit-transform: translate3d(-47vw, 0, -175px);
                 transform: translate3d(-47vw, 0, -175px);
                 z-index: 3;
             }
             &.left {
-                -ms-transform: translate3d(-22vw, 0, -75px);
-                -webkit-transform: translate3d(-22vw, 0, -75px);
                 transform: translate3d(-22vw, 0, -75px);
                 z-index: 5;
             }
             &.center {
-                -ms-transform: translate3d(0, 0, 0);
-                -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0);
                 z-index: 7;
             }
             &.right {
-                -ms-transform: translate3d(22vw, 0, -75px);
-                -webkit-transform: translate3d(22vw, 0, -75px);
                 transform: translate3d(22vw, 0, -75px);
                 z-index: 5;
             }
             &.far-right {
-                -ms-transform: translate3d(47vw, 0, -175px);
-                -webkit-transform: translate3d(47vw, 0, -175px);
                 transform: translate3d(47vw, 0, -175px);
                 z-index: 3;
             }
